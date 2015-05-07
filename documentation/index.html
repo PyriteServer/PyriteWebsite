@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	
+	    <!-- end favicon -->
+	
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Pyrite3D is a cube server designed to stream large 3D meshes to clients">
+	    <title>Pyrite3D &ndash; Home</title>
+
+		<style>
+			.pure-g-valign-fix{display:block;}
+		</style>
+		
+	
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<!--[if lte IE 8]>
+	    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">	  
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+	    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	<!--<![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="/css/layouts/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="/css/layouts/marketing.css">
+    <!--<![endif]-->
+	</head>
+	<body>
+	    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+	        <a class="pure-menu-heading" href="/">Pyrite3D</a>
+	
+	        <ul class="pure-menu-list">
+	            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+	            <li class="pure-menu-item"><a href="./documentation" class="pure-menu-link">API Documentation</a></li>
+	            <li class="pure-menu-item"><a href="https://github.com/PyriteServer" class="pure-menu-link">Code</a></li>
+	        </ul>
+	    </div>
+		
+		<div class="pure-g" style="text-align:center" id="main">
+			<div id="yui">
+				<h1>
+					API Documentation	
+				</h1>
+				The Pyrite3D API is a RESTful service that provides 3 discrete facilities to callers.
+				<ol>
+					<li><b>Discovery</b> - discover the models stored and exposed by Pyrite3D server</li>
+					<li><b>Query</b> - run spatial queries against the model</li>
+					<li><b>Download</b> - download cubes and related texture assets</li>
+				</ol>
+				
+				<h3>
+					API Cheatsheet
+				</h3>
+				<table class="pure-table">
+					<thead>
+						<tr>
+							<th>Method</th>
+							<th>Pattern</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>GET</td>
+							<td>/sets</td>
+							<td>Returns list of available sets</td>
+						</tr>
+						<tr>
+							<td>GET</td>
+							<td>/sets/&lt;setname&gt;</td>
+							<td>Returns metadata for set with specified name &lt;setname&gt;</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<h2>
+					Discovery
+				</h2>
+				APIs to enumerate the datasets published in storage.  The APIs expose structure, identities and metadata useful for creating client interactions.
+				<h2>
+					Query
+				</h2>
+				<h2>
+					Download
+				</h2>			
+			</div>		
+		</div>
+	</body>
+</html>
