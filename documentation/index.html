@@ -56,8 +56,8 @@
 	        </ul>
 	    </div>
 		
-		<div class="pure-g" style="text-align:center" id="main">
-			<div id="yui">
+		<div class="" style="text-align:center" id="main">
+			<div id="" style="text-align:left" class="pure-u-2-3">
 				<h1>
 					API Documentation	
 				</h1>
@@ -69,6 +69,11 @@
 				</ol>
 				
 				<h3>
+					Data Concepts
+				</h3>
+				The models are stored by name and version - such that I can have different versions of the same model.
+				
+				<h3>
 					API Cheatsheet
 				</h3>
 				<table class="pure-table">
@@ -77,18 +82,33 @@
 							<th>Method</th>
 							<th>Pattern</th>
 							<th>Description</th>
+							<th>Demo Page</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>GET</td>
-							<td>/sets</td>
-							<td>Returns list of available sets</td>
+							<td><code>/sets</code></td>
+							<td>Returns list of available set names</td>
+							<td>Demo</td>
 						</tr>
 						<tr>
 							<td>GET</td>
-							<td>/sets/&lt;setname&gt;</td>
-							<td>Returns metadata for set with specified name &lt;setname&gt;</td>
+							<td><code>/sets/&lt;setname&gt;</code></td>
+							<td>Returns list of available versions for set &lt;setname&gt;</td>
+							<td>Demo</td>
+						</tr>
+						<tr>
+							<td>GET</td>
+							<td><code>/sets/&lt;setname&gt;/$lt;version$gt;</code></td>
+							<td>Returns metadata for specified version of set &lt;setname&gt;</td>
+							<td>Demo</td>
+						</tr>
+						<tr>
+							<td>GET</td>
+							<td><code>/sets/&lt;setname&gt;/&lt;version&gt;/models/&lt;lod&gt;/&lt;x,y,z&gt;[?fmt=&lt;format&gt;]</code></td>
+							<td>Returns model data for the data at the specified world coordinates and level of detail</td>
+							<td>Demo</td>
 						</tr>
 					</tbody>
 				</table>
@@ -96,13 +116,23 @@
 				<h2>
 					Discovery
 				</h2>
-				APIs to enumerate the datasets published in storage.  The APIs expose structure, identities and metadata useful for creating client interactions.
+				<div>
+					APIs to enumerate the datasets published in storage.  The discovery service exposes structure, identities and metadata useful for creating client interactions.
+				</div>
 				<h2>
 					Query
 				</h2>
+				<div>
+					Pyrite loads model data into memory
+					
+					Spatial queries that return data a
+				</div>
 				<h2>
 					Download
 				</h2>			
+				<div>
+					APIs to enumerate the datasets published in storage.  The discovery service exposes structure, identities and metadata useful for creating client interactions.
+				</div>
 			</div>		
 		</div>
 	</body>
