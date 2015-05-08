@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<body>
+		<div>
+			Load some script here
+		</div>
+		<input>
+			<input type="button" onclick="onSendRequest()" id="send" value="Send Request"/>
+		</div>
+		<div id="output">
+		</div>
+	</body>
+	<script>
+        var outputDiv = document.getElementById("output");
+        var sendButton = document.getElementById("send");
+
+        var url = 'http://api.pyrite3d.org/sets';
+
+        var xhr = createCORSRequest('GET', url);
+		if (!xhr) {
+			outputDiv.innerText("Cross-Origin Requests not supported by your browser.")
+            sendButton.isDisabled = true;
+		}
+
+        // Response handlers.
+        xhr.onload = function() {
+            var text = xhr.responseText;
+            outputDiv.innerText = text;
+        };
+
+        xhr.onerror = function() {
+            outputDiv.innerText = "Error sending request";
+        };
+
+        function onSendRequest()
+        {
+            xhr.send();
+        }
+
+        function createCORSRequest(method, url) {
+			var xhr = new XMLHttpRequest();
+			if ("withCredentials" in xhr) {
+
+				// Check if the XMLHttpRequest object has a "withCredentials" property.
+				// "withCredentials" only exists on XMLHTTPRequest2 objects.
+				xhr.open(method, url, true);
+
+			} else if (typeof XDomainRequest != "undefined") {
+
+				// Otherwise, check if XDomainRequest.
+				// XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+				xhr = new XDomainRequest();
+				xhr.open(method, url);
+
+			} else {
+
+				// Otherwise, CORS is not supported by the browser.
+				xhr = null;
+
+			}
+			return xhr;
+		}
+	</script>
+</html>
