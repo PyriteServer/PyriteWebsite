@@ -1,4 +1,5 @@
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
 		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -23,7 +24,7 @@
 	    <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Pyrite3D is a cube server designed to stream large 3D meshes to clients">
-	    <title>Pyrite3D &ndash; Home</title>
+	    <title>Pyrite3D &ndash; Documentation</title>
 
 		<style>
 			.pure-g-valign-fix{display:block;}
@@ -46,94 +47,78 @@
     <!--<![endif]-->
 	</head>
 	<body>
-	    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-	        <a class="pure-menu-heading" href="/">Pyrite3D</a>
-	
-	        <ul class="pure-menu-list">
-	            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-	            <li class="pure-menu-item"><a href="./documentation" class="pure-menu-link">API Documentation</a></li>
-	            <li class="pure-menu-item"><a href="https://github.com/PyriteServer" class="pure-menu-link">Code</a></li>
-	        </ul>
-	    </div>
+		<div class="header">
+		    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+		        <a class="pure-menu-heading" href="/">Pyrite3D</a>
 		
-		<div class="" style="text-align:center" id="main">
-			<div id="" style="text-align:left" class="pure-u-2-3">
-				<h1>
-					API Documentation	
-				</h1>
-				The Pyrite3D API is a RESTful service that provides 3 discrete facilities to callers.
-				<ol>
-					<li><b>Discovery</b> - discover the models stored and exposed by Pyrite3D server</li>
-					<li><b>Query</b> - run spatial queries against the model</li>
-					<li><b>Download</b> - download cubes and related texture assets</li>
-				</ol>
-				
-				<h3>
-					Data Concepts
-				</h3>
-				The models are stored by name and version - such that I can have different versions of the same model.
-				
-				<h3>
-					API Cheatsheet
-				</h3>
-				<table class="pure-table">
-					<thead>
-						<tr>
-							<th>Method</th>
-							<th>Pattern</th>
-							<th>Description</th>
-							<th>Demo Page</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>GET</td>
-							<td><code>/sets</code></td>
-							<td>Returns list of available set names</td>
-							<td>Demo</td>
-						</tr>
-						<tr>
-							<td>GET</td>
-							<td><code>/sets/&lt;setname&gt;</code></td>
-							<td>Returns list of available versions for set &lt;setname&gt;</td>
-							<td>Demo</td>
-						</tr>
-						<tr>
-							<td>GET</td>
-							<td><code>/sets/&lt;setname&gt;/$lt;version$gt;</code></td>
-							<td>Returns metadata for specified version of set &lt;setname&gt;</td>
-							<td>Demo</td>
-						</tr>
-						<tr>
-							<td>GET</td>
-							<td><code>/sets/&lt;setname&gt;/&lt;version&gt;/models/&lt;lod&gt;/&lt;x,y,z&gt;[?fmt=&lt;format&gt;]</code></td>
-							<td>Returns model data for the data at the specified world coordinates and level of detail</td>
-							<td>Demo</td>
-						</tr>
-					</tbody>
-				</table>
-				
-				<h2>
-					Discovery
-				</h2>
-				<div>
-					APIs to enumerate the datasets published in storage.  The discovery service exposes structure, identities and metadata useful for creating client interactions.
-				</div>
-				<h2>
-					Query
-				</h2>
-				<div>
-					Pyrite loads model data into memory
+		        <ul class="pure-menu-list">
+		            <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
+		            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Documentation</a></li>
+		            <li class="pure-menu-item"><a href="https://github.com/PyriteServer" class="pure-menu-link">Code</a></li>
+		        </ul>
+		    </div>
+		</div>
+		<div class="content">
+			<div class="" style="text-align:center" id="main">
+				<div id="" style="text-align:left" class="pure-u-2-3">
+					<h1 class="content-head">
+						API Documentation	
+					</h1>
+					The Pyrite3D API is a RESTful service that provides 3 discrete facilities to callers.
+					<ol>
+						<li><b>Discovery</b> - discover the models stored and exposed by Pyrite3D server</li>
+						<li><b>Query</b> - run spatial queries against the model</li>
+						<li><b>Download</b> - download cubes and related texture assets</li>
+					</ol>
 					
-					Spatial queries that return data a
-				</div>
-				<h2>
-					Download
-				</h2>			
-				<div>
-					APIs to enumerate the datasets published in storage.  The discovery service exposes structure, identities and metadata useful for creating client interactions.
-				</div>
-			</div>		
+					<h3 class="content-subhead">
+						Data Concepts
+					</h3>
+					The models are stored by name and version - such that I can have different versions of the same model.
+					
+					<h3 class="content-subhead">
+						API Cheatsheet
+					</h3>
+					<table class="pure-table">
+						<thead>
+							<tr>
+								<th>Method</th>
+								<th>Pattern</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>GET</td>
+								<td><code>/sets</code></td>
+								<td>Returns list of available set names</td>
+							</tr>
+							<tr>
+								<td>GET</td>
+								<td><code>/sets/&lt;setname&gt;</code></td>
+								<td>Returns list of available versions for set &lt;setname&gt;</td>
+							</tr>
+							<tr>
+								<td>GET</td>
+								<td><code>/sets/&lt;setname&gt;/&lt;version&gt;</code></td>
+								<td>Returns metadata for specified version of set &lt;setname&gt;</td>
+							</tr>
+							<tr>
+								<td>GET</td>
+								<td><code>/sets/&lt;setname&gt;/&lt;version&gt;/models/&lt;lod&gt;/&lt;x,y,z&gt;[?fmt=&lt;format&gt;]</code></td>
+								<td>Returns model data for the data at the specified world coordinates and level of detail</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<h2 class="content-subhead">
+						More Information
+					</h2>
+					<div>
+						For updated information about the Pyrite3D API please refer to the project <a href="https://github.com/PyriteServer/PyriteServer/wiki">wiki page</a>.
+					</div>
+				</div>		
+			</div>
 		</div>
 	</body>
 </html>
