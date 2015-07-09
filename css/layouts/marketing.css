@@ -220,6 +220,35 @@ a.pure-button-primary {
     background: #111;
 }
 
+.navtable {
+    width:100%;
+    height:100%;
+}
+
+#nav {
+    float:left;
+    list-style: none;
+}
+
+#nav li {
+    display: inline;
+    width: 100%;
+}
+
+#nav li a {
+    display: inline;
+    text-decoration: none;
+}
+
+#nav li.selected a {
+    background-color: gray;
+    font-weight:bold;
+}
+
+.selected {
+    background-color: green;
+}
+
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
